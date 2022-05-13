@@ -18,7 +18,7 @@ header {
     grid-template-columns: 1.3fr 1.4fr 1.3fr;
     top: 0;
     z-index: 10;
-    background-color: lightgray;
+    background: linear-gradient(rgb(166, 166, 166), rgb(220, 219, 219));
     height: fit-content;
 }
 
@@ -73,6 +73,14 @@ h1 {
     height: 1.7rem;
 }
 
+.lupa:hover {
+    transform: scale(1.15);
+}
+
+.imgCarro:hover {
+    transform: scale(1.1);
+}
+
 .busqueda {
     display: flex;
     align-items: center;
@@ -97,7 +105,7 @@ h1 {
                              "empty title nada";
     }
     nav {
-        background-color: lightgray;
+        background-color: transparent;
     }
 
     .comprasBusqueda {
@@ -132,9 +140,15 @@ main {
 .subtitulosMain {
     font-size: 1.2rem;
     text-decoration: none;
-    text-align: center;
     padding: 1rem 0 1rem 0;
+    width: fit-content;
+    margin: auto;
 }
+
+.subtitulosMainIndex:hover {
+    transform:scale(1.05);
+}
+
 @media (min-width: 1000px) {
     .subtitulosMain {
         font-size: 1.4rem;
@@ -271,6 +285,25 @@ footer {
     bottom: 6vh;
     right: 3vw;
     z-index: 12;
+}
+
+.botonWhatsapp:hover {
+    animation-name: salta;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes salta {
+    0%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(0,-20px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+
 }
 
 .credits {
@@ -452,6 +485,11 @@ footer {
     width: fit-content;
 }
 
+.enviarForm:hover {
+    background-color: rgb(193, 193, 193);
+    cursor: pointer;
+}
+
 @media (min-width: 1000px) {
     .mainContacto {
         display: flex;
@@ -474,6 +512,7 @@ footer {
     display: grid;
     grid-template-areas: "titulo titulo"
                          "imagen texto";
+    margin: 0 3vw 0 3vw;
 }
 
 .novedadSegunda {
@@ -491,6 +530,7 @@ footer {
 
 .novedad h2 {
     grid-area: titulo;
+    text-align: center;
 }
 
 .novedad .txtNovedad {
@@ -501,4 +541,15 @@ footer {
 .novedad img {
     width: 100%;
     border-radius: 1rem;
+}
+
+@media (min-width: 1000px) {
+    .mainNovedades {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .novedad {
+        grid-template-rows: 1fr 5fr;
+    }
 }
