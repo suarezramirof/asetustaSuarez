@@ -4,102 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
     <title>Contacto</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li class="itemMenu">
-                    <a href="../index.html">
-                        Inicio
-                    </a>
-                </li>
-                <li class="itemMenu">
-                    <a href="productos.html">
-                        Productos
-                    </a>
-                </li>
-                <li class="itemMenu">
-                    <a href="ofertas.html">
-                        Ofertas
-                    </a>
-                </li>
-                <li class="itemMenu">
-                    <a href="novedades.html">
-                        Novedades
-                    </a>
-                </li>
-                <li class="itemMenu">
-                    <a href="quienessomos.html">
-                        Quienes somos
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="tituloSubtitulo">
-            <h1>
-                <a href="../index.html">
-                    Asetusta
-                </a>
-            </h1>
-            <h2 class="tituloSeccion"> Contacto </h2>
-        </div>
-        <div class="comprasBusqueda">
-            <div class="busqueda">
-                <input class="cuadroBusqueda" type="text">
-                <a href="#">
-                    <img class="lupa" src="../icons/magnifying-glass.png" alt="imagen de una lupa">
-                </a>
-            </div>
-            <div class="compras">
-                <a href="#">
-                    <img class="imgCarro" src="../icons/shopping-cart.png" alt="imagen de un carro de compras">
-                </a>
-            </div>
-        </div>
+        <div class="contLogo">
+            <a href="#">
+                <img class="logo" src="../img/asetusta-removebg.png" alt="logo de asetusta">
+            </a>
+        </div class="contLogo">
     </header>
-    <main class="mainContacto">
-        <div class="formContacto">
-            <form action="submit" method="post">
-                <fieldset class="campoContacto">
-                    <legend class="leyendaContacto">
-                        Escribinos
-                    </legend>
-                    <div class="formElements">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                    
-                        <label for="mail">E-mail</label>
-                        <input type="email" id="mail" name="mail" placeholder="ejemplo@dominio.com">
-                   
-                        <label for="telefono">Teléfono</label>
-                        <input type="number" id="telefono" name="telefono" placeholder="Incluir código de área">
-        
-                        <label for="mensaje">Mensaje
-                        </label>
-                        <textarea class="mensaje" name="mensaje" id="mensaje" cols="50" rows="5" placeholder="Escribinos tu consulta"></textarea>
+    <nav class="navbar navbar-expand-xl bg-transparent"> 
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="productos.html" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PRODUCTOS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="productos.html#hogar">Línea Hogar</a></li>
+                            <li><a class="dropdown-item" href="productos.html#oficina">Línea Oficina</a></li>
+                            <li><a class="dropdown-item" href="productos.html#exterior">Línea Exterior</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="ofertas.html">OFERTAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="novedades.html">NOVEDADES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="quienessomos.html">QUIENES SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <div class="carrito">
+                        <a href="#">
+                            <img class="imgCarrito" src="../icons/shopping-cart.png" alt="carrito de compras">
+                        </a>
                     </div>
-                    <div class="divEnviar">
-                        <button type="submit" class="enviarForm"> Enviar </button>
-                    </div>
-                </fieldset>
-            </form>
+                </form>
+            </div>
         </div>
-        <div class="itemsContacto">
-            <img src="../icons/telephone.png" alt="teléfono" class="iconoContacto iconoTel">
-            <div class="infoContacto">
-                <p>+54 11-2254-8030</p>
+    </nav>
+    <main>
+        <div class="titMain">
+            <h2 class="titulosMain">CONTACTANOS</h2>
+        </div>
+        <div class="mainContacto">
+            <div class="formContacto">
+                <form action="submit" method="post">
+                    <fieldset class="campoContacto">
+                        <div class="formElements">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        
+                            <label for="mail">E-mail</label>
+                            <input type="email" id="mail" name="mail" placeholder="ejemplo@dominio.com">
+                       
+                            <label for="telefono">Teléfono</label>
+                            <input type="number" id="telefono" name="telefono" placeholder="Incluir código de área">
+            
+                            <label for="mensaje">Mensaje
+                            </label>
+                            <textarea class="mensaje" name="mensaje" id="mensaje" cols="50" rows="5" placeholder="Escribinos tu consulta"></textarea>
+                        </div>
+                        <div class="divEnviar">
+                            <button type="submit" class="enviarForm"> Enviar </button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
-            <img src="../icons/email.png" alt="email" class="iconoContacto iconoMail">
-            <div class="infoContacto">
-                <p>info@asetusta.com</p>
-            </div>
-            <img src="../icons/pin.png" alt="pin ubicación" class="iconoContacto iconoLoc">
-            <div class="infoContacto">
-                <p>French 3564</p>
-                <p>San Isidro, Buenos Aires</p>
+            <div class="itemsContacto">
+                <a href="tel: +5411-2254-8030">
+                    <img src="../icons/telephone.png" alt="teléfono" class="iconoContacto iconoTel">
+                </a>
+                <div class="infoContacto">
+                    <p>+54 11-2254-8030</p>
+                </div>
+                <a href="mailto:info@asetusta.com" target="_blank">
+                    <img src="../icons/email.png" alt="email" class="iconoContacto iconoMail">
+                </a>
+                <div class="infoContacto">
+                    <p>info@asetusta.com</p>
+                </div>
+                <a href="https://maps.google.com" target="_blank">
+                    <img src="../icons/pin.png" alt="pin ubicación" class="iconoContacto iconoLoc">
+                </a>
+                <div class="infoContacto">
+                    <p>French 3564</p>
+                    <p>San Isidro, Buenos Aires</p>
+                </div>
             </div>
         </div>
     </main>
@@ -160,5 +173,8 @@
             <p>design by <a href="mailto:suarezramirof@gmail.com">RFS</a></p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 </body>
 </html>
