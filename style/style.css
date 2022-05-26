@@ -56,8 +56,8 @@ header {
 }
 
 .contLogo {
-    max-width: 10rem;
-    margin: auto;
+    width: 10rem;
+    margin: 2rem auto 0 auto;
     z-index: 10;
     grid-area: logo;
     
@@ -76,6 +76,13 @@ header {
     width: 100%;
 }
 
+@media(min-width: 768px) {
+    .contLogo {
+        width: 12rem;
+        margin: 1rem auto 0 auto;
+    }
+}
+
 @media (min-width: 1200px) {
     header {
         top: 3.75rem;
@@ -84,6 +91,7 @@ header {
 
     .contLogo {
         width: 12rem;
+        margin-top: 0;
     }
 
     .navbar {
@@ -156,6 +164,7 @@ main {
 
 .contIndex {
     padding-bottom: 2rem;
+    display: none;
 }
 
 .seccionInicio{
@@ -183,7 +192,20 @@ a:hover {
     color: black;
 }
 
-@media (min-width: 768px) {
+.carousel {
+    width: 85%;
+    max-width: 70vh;
+    margin: 3rem auto;
+}
+
+@media (orientation: landscape) {
+    .carousel {
+        max-width: 100vh;
+    }
+    
+}
+
+@media (min-width: 1200px) {
     .contIndex {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -192,7 +214,13 @@ a:hover {
     .linkMainInicio {
         width: 90%;
     }
+
+    .carousel {
+        display: none;
+    }
 }
+
+
 
 /* Productos */
 
