@@ -1,0 +1,32 @@
+.quienes {
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    .quienesTexto {
+        h3 {
+            padding-bottom: 0.5rem;
+        }
+    }
+    .quienesImagen {
+        margin-top: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+    @media($medium) {
+        display: grid;
+        grid-template-areas: "texto imagen";
+        gap: 1rem;
+        align-items: center;
+        .quienesImagen {
+            grid-area: imagen;
+            width: 35vw;
+        }
+        .quienesTexto {
+            grid-area: texto;
+        }
+    }
+}
+.quienesHoy {
+    padding-bottom: 2rem;
+}

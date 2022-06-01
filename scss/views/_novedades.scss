@@ -1,0 +1,37 @@
+.mainNovedades{
+    .novedad {
+        display: grid;
+        grid-template-areas: "titulo titulo"
+                            "imagen texto";
+        margin: 0 3vw 0 3vw;
+        .imgNovedad {
+            grid-area: imagen;
+            margin: 0 1rem 1rem 1rem;
+            img {
+                width: 100%;
+                border-radius: 1rem;
+            }
+        }
+        h3 {
+            grid-area: titulo;
+            text-align: center;
+        }
+        .txtNovedad {
+            grid-area: texto;
+            margin: 0 1rem 1rem 1rem;
+        }
+    }
+    .novedadSegunda {
+        grid-template-columns: 1fr 1fr;
+        .imgNovedad {
+            align-self: center;
+        }
+    }
+    @media($medium) {
+        display: grid;
+        grid-template-columns: auto auto;
+        .novedad {
+            grid-template-rows: 1fr 5fr;
+        }
+    }
+}

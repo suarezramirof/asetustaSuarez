@@ -1,0 +1,50 @@
+.ancla {
+    position: relative;
+    top: -70px;
+    @media($medium) {
+        top: -90px;
+    }
+    @media($large) {
+        top: -120px;
+    }
+}
+
+.anclaPrimera {
+    top: -160px;
+    @media($medium) {
+        top: -200px;
+    }
+    @media($large) {
+        top: -270px;
+    }
+}
+
+.imagenesProductos {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    justify-items: center;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    a {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        p {
+            text-align: center;
+            @include contents-font(0.9rem);
+            .nombreProducto {
+                font-weight: 800;
+            }
+        }
+    }
+    @media($medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media($large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+

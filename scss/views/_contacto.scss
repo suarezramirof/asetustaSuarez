@@ -1,0 +1,75 @@
+.mainContacto {
+    .formContacto {
+        padding: 1rem;
+        .formElements {
+            display: flex;
+            flex-direction: column;
+            margin: 0.75rem;
+            .mensaje {
+                min-height: 20vh;
+            }
+        }
+        .divEnviar {
+            text-align: center;
+            button {
+                @include headers-font(1rem);
+                font-weight: 900;
+                width: 5rem;
+                border-radius: 0.5rem;
+                &:hover {
+                    background-color: rgb(193,193,193);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .itemsContacto {
+        padding: 1rem 0;
+        width: 60vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        .iconoContacto {
+            width: 2.5rem;
+        }
+        .infoContacto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                width: fit-content;
+            }
+        }
+    }
+    @media($medium) {
+        display: flex;
+        .formContacto {
+            width: 60vw;
+            @media($large) {
+                width: 50vw;
+            }
+        }
+        .itemsContacto {
+            width: auto;
+            &:hover {
+                cursor: pointer;
+            }
+            .iconoLoc:hover {
+                animation-name: location;
+                animation-iteration-count: infinite;
+                animation-duration: 1s; 
+            }
+            .iconoTel:hover {
+                animation-name: telefono;
+                animation-iteration-count: infinite;
+                animation-duration: 1s;
+            }
+            .iconoMail:hover {
+                animation-name: mail;
+                animation-iteration-count: infinite;
+                animation-duration: 1s;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+header {
+    display: inline-block;
+    width: 70%;
+    position: absolute;
+    top: 1rem;
+    left: 30%;
+    z-index: 2;
+    display: grid;
+    grid-template-areas: "logo logo null";
+    grid-template-columns: 1fr 1fr 1.5fr;
+    div {
+        width: 10rem;
+        margin: 2rem auto 0 auto;
+        // z-index: 10;
+        grid-area: logo;
+        img {
+            width: 100%;
+        }
+    }
+    @media ($medium) {
+        div {
+            width: 12rem;
+            margin: 1rem auto 0 auto;
+        }
+    }
+    @media ($large){
+        top: 3.75rem;
+        // z-index: 4;
+        div {
+            margin-top: 0;
+        }
+    }
+}

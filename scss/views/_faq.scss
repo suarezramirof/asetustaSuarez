@@ -1,0 +1,12 @@
+.contenedorFaq {
+    text-align: justify;
+    h3 {
+        text-align: center;
+        @include headers-font(1.2rem);
+    }
+    .row {
+        div {
+            margin-bottom: 2rem;
+        }
+    }
+}

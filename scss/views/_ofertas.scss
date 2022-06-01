@@ -1,0 +1,56 @@
+.oferta {
+    display: grid;
+    grid-template-areas: "img texto"
+                         "compra compra";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 9fr 2fr;
+    height: fit-content;
+    .imgOferta {
+        width: 80%;
+        justify-self: center;
+        padding-top: 3vh;
+        grid-area: img;
+        img {
+            width: 100%;
+            border-radius: 1rem;
+        }
+    }
+    .infoCompra {
+        height: 90%;
+        width: 90%;
+        grid-area: texto;
+        .infoOferta {
+            h3 {
+                padding: 3vh 0 0.5rem 0;
+            }
+            p {
+                @include contents-font(0.9rem);
+                text-align: justify;
+            }
+        }
+    }
+    .compraOferta {
+        grid-area: compra;
+        align-self: center;
+        a{
+            padding-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 2rem;
+            }
+        }
+    }
+    @media($medium) {
+        grid-template-areas: "img texto"
+                             "img compra";
+        grid-template-columns: 1fr 3fr;
+        padding-bottom: 1rem;
+        .compraOferta {
+            a {
+                justify-content: flex-start;
+            }
+        }
+    }
+}

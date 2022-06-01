@@ -1,0 +1,45 @@
+.navbar {
+    @include contents-font(1rem);
+    position: sticky;
+    top: 0;
+    min-height: 6rem;
+    z-index: 1;
+    .navbar-toggler {
+        border: none;
+        --bs-navbar-toggler-focus-width: none;
+        --bs-navbar-toggler-padding-x: 0.25rem;
+    }
+    .dropdown-menu {
+        border: none;
+        .dropdown-item {
+            --bs-dropdown-link-color: rgba(0,0,0,0.95);
+            --bs-dropdown-link-hover-bg: none;
+        }
+    }
+    form .carrito {
+        padding-left: 0.5rem;
+        width: 4rem;
+        img {
+            width: 100%;
+        }
+    }
+    @media ($large) {
+        @include contents-font(1.15rem);
+        --bs-navbar-padding-y: 0;
+        min-height: 0;
+        .navbar-nav {
+            margin-left: 2vw;
+            padding: 0.5rem 0;
+            .dropdown-menu {
+                border-color: gray;
+                .dropdown-item {
+                    --bs-dropdown-link-color: rgba(0,0,0,0.8);
+                    --bs-dropdown-link-hover-bg: rgba(211,211,211,0.289);
+                }
+            }
+        }
+        form .carrito {
+            margin-right: 1rem;
+        }
+    }
+}

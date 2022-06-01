@@ -1,0 +1,74 @@
+footer {
+    background-color: rgb(230,230,230);
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    text-align:center;
+    .divsFooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            h4 {
+                @include contents-font(1rem);
+                padding: 1rem 0 0.4rem 0;
+            }
+            ul {
+                padding-left: 0;
+                li {
+                    padding: 0.5rem 0;
+                    @include contents-font(0.9rem);
+                }
+            }
+        }
+        .redesSociales {
+            h4 {
+                margin: 1rem 0;
+            }
+            div {
+                display: flex;
+                justify-content: space-around;
+                width: 40vw;
+                img {
+                    height: 40px;
+                }
+            }
+            .botonWhatsapp {
+                position: fixed;
+                bottom: 6vh;
+                right: 3vw;
+                z-index: 4;
+                .whatsapp {
+                    height: 50px;
+                }
+                &:hover {
+                    animation-name: salta;
+                    animation-iteration-count: infinite;
+                    animation-duration: 1s;
+                }
+            }
+        }
+        @media($medium) {
+            display: grid;
+            grid-template-areas: "ayuda redes blank" "nosotros redes blank";
+            grid-template-columns: 1fr 1fr 2fr;
+            align-items: start;
+            justify-items: center;
+            .redesSociales {
+                div {
+                    width: 15vw;
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+    
+    .credits {
+        align-self:center;
+        margin-top: 1rem;
+        @include contents-font(0.8rem);
+        a {
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}

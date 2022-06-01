@@ -1,0 +1,16 @@
+.carousel {
+    width: 85%;
+    max-width: 70vh;
+    margin: 3rem auto;
+    .carousel-item {
+        a {
+            width: 65%;
+        }
+    }
+    @media (orientation: landscape) {
+        max-width: 100vh;
+    }
+    @media($large) {
+        display: none;
+    }
+}
