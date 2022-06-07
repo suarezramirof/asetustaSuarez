@@ -13,12 +13,6 @@ a {
   text-decoration: none;
   color: black; }
 
-p {
-  font-family: "Roboto", sans-serif;
-  color: black;
-  font-size: 1rem;
-  line-height: normal; }
-
 @keyframes salta {
   0% {
     transform: translate(0, 0); }
@@ -61,20 +55,21 @@ header {
   display: grid;
   grid-template-areas: "logo logo null";
   grid-template-columns: 1fr 1fr 1.5fr; }
-  header div {
+  @media (min-width: 1200px) {
+    header {
+      top: 3.75rem; } }
+  header h1 {
     width: 10rem;
     margin: 2rem auto 0 auto;
     grid-area: logo; }
-    header div img {
+    header h1 img {
       width: 100%; }
-  @media (min-width: 768px) {
-    header div {
-      width: 12rem;
-      margin: 1rem auto 0 auto; } }
-  @media (min-width: 1200px) {
-    header {
-      top: 3.75rem; }
-      header div {
+    @media (min-width: 768px) {
+      header h1 {
+        width: 12rem;
+        margin: 1rem auto 0 auto; } }
+    @media (min-width: 1200px) {
+      header h1 {
         margin-top: 0; } }
 
 .navbar {
@@ -123,33 +118,32 @@ main {
   margin-top: 5rem;
   margin-bottom: 1rem;
   min-height: 44vh; }
-  main .titulosMain {
+  @media (min-width: 768px) {
+    main {
+      margin-bottom: 1.5rem; } }
+  @media (min-width: 1200px) {
+    main {
+      margin-top: 10rem;
+      margin-bottom: 2rem; } }
+  main .titulosMain, main .subtitulosMain {
     font-family: "Work Sans", cursive;
     color: #b17f23;
     font-size: 1.4rem;
-    text-align: center; }
-  main .subtitulosMain {
-    font-family: "Work Sans", cursive;
-    color: #b17f23;
-    font-size: 1.2rem;
     text-align: center;
-    text-decoration: none;
+    text-transform: uppercase; }
+  main .subtitulosMain {
+    text-transform: none;
+    font-size: 1.25rem;
     padding: 1rem 0;
     width: fit-content;
     margin: auto; }
-  @media (min-width: 768px) {
-    main {
-      margin-bottom: 1.5rem; }
+    @media (min-width: 768px) {
       main .subtitulosMain {
         font-family: "Work Sans", cursive;
         color: #b17f23;
         font-size: 1.4rem;
         text-align: center;
         padding-bottom: 2rem; } }
-  @media (min-width: 1200px) {
-    main {
-      margin-top: 10rem;
-      margin-bottom: 2rem; } }
 
 footer {
   background-color: #e6e6e6;
@@ -271,8 +265,8 @@ footer {
       color: black;
       font-size: 0.9rem;
       line-height: normal; }
-      .imagenesProductos a p .nombreProducto {
-        font-weight: 800; }
+    .imagenesProductos a .nombreProducto {
+      font-weight: 800; }
   @media (min-width: 768px) {
     .imagenesProductos {
       grid-template-columns: repeat(3, 1fr); } }
@@ -428,8 +422,6 @@ footer {
 @media (min-width: 768px) {
     .mainContacto .itemsContacto {
       width: auto; }
-      .mainContacto .itemsContacto:hover {
-        cursor: pointer; }
       .mainContacto .itemsContacto .iconoLoc:hover {
         animation-name: location;
         animation-iteration-count: infinite;

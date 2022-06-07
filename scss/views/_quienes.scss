@@ -13,7 +13,7 @@
             width: 100%;
         }
     }
-    @media($medium) {
+    @media(map-get($media,medium)) {
         display: grid;
         grid-template-areas: "texto imagen";
         gap: 1rem;

@@ -10,7 +10,7 @@
     @media (orientation: landscape) {
         max-width: 100vh;
     }
-    @media($large) {
+    @media(map-get($media,large)) {
         display: none;
     }
 }

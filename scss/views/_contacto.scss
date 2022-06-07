@@ -42,19 +42,17 @@
             }
         }
     }
-    @media($medium) {
+    @media(map-get($media,medium)) {
         display: flex;
         .formContacto {
             width: 60vw;
-            @media($large) {
+            @media(map-get($media,large)) {
                 width: 50vw;
             }
         }
-        .itemsContacto {
+        .itemsContacto { 
             width: auto;
-            &:hover {
-                cursor: pointer;
-            }
+            
             .iconoLoc:hover {
                 animation-name: location;
                 animation-iteration-count: infinite;

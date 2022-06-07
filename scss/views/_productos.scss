@@ -1,20 +1,20 @@
 .ancla {
     position: relative;
     top: -70px;
-    @media($medium) {
+    @media(map-get($media,medium)) {
         top: -90px;
     }
-    @media($large) {
+    @media(map-get($media,large)) {
         top: -120px;
     }
 }
 
 .anclaPrimera {
     top: -160px;
-    @media($medium) {
+    @media(map-get($media,medium)) {
         top: -200px;
     }
-    @media($large) {
+    @media(map-get($media,large)) {
         top: -270px;
     }
 }
@@ -35,15 +35,15 @@
         p {
             text-align: center;
             @include contents-font(0.9rem);
-            .nombreProducto {
-                font-weight: 800;
-            }
+        }
+        .nombreProducto {
+            font-weight: 800;
         }
     }
-    @media($medium) {
+    @media(map-get($media,medium)) {
         grid-template-columns: repeat(3, 1fr);
     }
-    @media($large) {
+    @media(map-get($media,large)) {
         grid-template-columns: repeat(4, 1fr);
     }
 }

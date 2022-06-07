@@ -47,7 +47,7 @@ footer {
                 }
             }
         }
-        @media($medium) {
+        @media(map-get($media,medium)) {
             display: grid;
             grid-template-areas: "ayuda redes blank" "nosotros redes blank";
             grid-template-columns: 1fr 1fr 2fr;

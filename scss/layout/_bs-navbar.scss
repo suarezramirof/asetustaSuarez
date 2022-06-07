@@ -23,7 +23,7 @@
             width: 100%;
         }
     }
-    @media ($large) {
+    @media (map-get($media,large)) {
         @include contents-font(1.15rem);
         --bs-navbar-padding-y: 0;
         min-height: 0;

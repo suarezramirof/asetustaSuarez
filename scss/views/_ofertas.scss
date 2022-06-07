@@ -42,7 +42,7 @@
             }
         }
     }
-    @media($medium) {
+    @media(map-get($media,medium)) {
         grid-template-areas: "img texto"
                              "img compra";
         grid-template-columns: 1fr 3fr;
