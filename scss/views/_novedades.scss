@@ -2,7 +2,7 @@
     .novedad {
         display: grid;
         grid-template-areas: "titulo titulo"
-                            "imagen texto";
+                             "imagen texto";
         margin: 0 3vw 0 3vw;
         .imgNovedad {
             grid-area: imagen;
@@ -28,10 +28,15 @@
         }
     }
     @media(map-get($media,medium)) {
+        .novedad {
+            margin-top: 2rem;
+            grid-template-areas: "imagen titulo"
+                                 "imagen texto";
+            grid-template-rows: auto auto;
+        }
+    }
+    @media(map-get($media,large)) {
         display: grid;
         grid-template-columns: auto auto;
-        .novedad {
-            grid-template-rows: 1fr 5fr;
-        }
     }
 }

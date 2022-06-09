@@ -1,12 +1,18 @@
-.contenedorFaq {
-    text-align: justify;
-    h3 {
-        text-align: center;
-        @include headers-font(1.2rem);
+.contFaq {
+    margin: 2rem 1rem 1rem 1rem;
+    @media(map-get($media,large)) {
+        margin: 2rem 0 1rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    .row {
-        div {
-            margin-bottom: 2rem;
+    .fotoFaq {
+        display: none;
+        margin: 0 2rem 0 0;
+        img {
+            width: 100%;
+        }
+        @media(map-get($media,large)) {
+            display: block;
         }
     }
 }

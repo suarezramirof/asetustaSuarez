@@ -90,6 +90,22 @@ header {
     .navbar .dropdown-menu .dropdown-item {
       --bs-dropdown-link-color: rgba(0,0,0,0.95);
       --bs-dropdown-link-hover-bg: none; }
+  .navbar form .form-control {
+    box-shadow: none;
+    border-color: rgba(177, 127, 35, 0.4); }
+  .navbar form .btn {
+    --bs-btn-color: black;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(177, 127, 35,0.4)
+        ; }
+  .navbar form .btn-outline-success {
+    --bs-btn-hover-bg: rgba(177, 127, 35,0.4);
+    --bs-btn-hover-color: black;
+    --bs-btn-hover-border-color: rgba(177, 127, 35,0.4);
+    --bs-btn-border-color: rgba(177, 127, 35,0.4);
+    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgba(177, 127, 35,0.8);
+    --bs-btn-active-border-color: rgba(177, 127, 35,0.8); }
   .navbar form .carrito {
     padding-left: 0.5rem;
     width: 4rem; }
@@ -341,11 +357,15 @@ footer {
     align-self: center; }
 
 @media (min-width: 768px) {
+  .mainNovedades .novedad {
+    margin-top: 2rem;
+    grid-template-areas: "imagen titulo" "imagen texto";
+    grid-template-rows: auto auto; } }
+
+@media (min-width: 1200px) {
   .mainNovedades {
     display: grid;
-    grid-template-columns: auto auto; }
-    .mainNovedades .novedad {
-      grid-template-rows: 1fr 5fr; } }
+    grid-template-columns: auto auto; } }
 
 .quienes {
   text-align: justify;
@@ -435,16 +455,21 @@ footer {
         animation-iteration-count: infinite;
         animation-duration: 1s; } }
 
-.contenedorFaq {
-  text-align: justify; }
-  .contenedorFaq h3 {
-    text-align: center;
-    font-family: "Work Sans", cursive;
-    color: #b17f23;
-    font-size: 1.2rem;
-    text-align: center; }
-  .contenedorFaq .row div {
-    margin-bottom: 2rem; }
+.contFaq {
+  margin: 2rem 1rem 1rem 1rem; }
+  @media (min-width: 1200px) {
+    .contFaq {
+      margin: 2rem 0 1rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
+  .contFaq .fotoFaq {
+    display: none;
+    margin: 0 2rem 0 0; }
+    .contFaq .fotoFaq img {
+      width: 100%; }
+    @media (min-width: 1200px) {
+      .contFaq .fotoFaq {
+        display: block; } }
 
 .carousel {
   width: 85%;
@@ -458,3 +483,10 @@ footer {
   @media (min-width: 1200px) {
     .carousel {
       display: none; } }
+
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: black;
+  --bs-accordion-btn-focus-border-color: rgba(177,127,35,1);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0.25rem 0.15rem rgba(177,127,35,0.7);
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"); }
