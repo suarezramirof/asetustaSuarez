@@ -2,11 +2,11 @@ header {
     // El header contiene únicamente el logo. Está posicionado por delante de todos los demás elementos. Se establece el display en inline block para que no ocupe el ancho total de la página y no "tape" al menú.
     display: inline-block;
     // Ancho del 50% por lo mismo que se describe antes
-    width: 50%;
+    width: 42%;
     position: absolute;
     top: 1rem;
     // Como el ancho es del 50%, al establecer left en 25%, se centra. (Siempre y cuando el ancho de h1 no supere al del header)
-    left: 25%;
+    left: 29%;
     z-index: 2;
     @media (map-get($media,large)){
         top: 3.75rem;

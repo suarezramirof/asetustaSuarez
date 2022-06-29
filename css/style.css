@@ -49,10 +49,10 @@ a {
 
 header {
   display: inline-block;
-  width: 50%;
+  width: 42%;
   position: absolute;
   top: 1rem;
-  left: 25%;
+  left: 29%;
   z-index: 2; }
   @media (min-width: 1200px) {
     header {
