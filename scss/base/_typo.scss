@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+// Se configuran dos mixins para fuentes (de contenidos generales y de títulos). La variable a pasar es únicamente el font-size.
+// SOLO modificar si se pretende realizar cambios globales
 @mixin contents-font($size) {
     font-family: "Roboto", sans-serif;
     color: black;

@@ -1,4 +1,5 @@
 .contIndex {
+    // En vista mobile y desktop, este div no se debe visualizar ya que se usa el carrusel de BS.
     display: none;
     @media(map-get($media,large)) {
         padding-bottom: 1rem;
@@ -12,10 +13,8 @@
             padding: 0 0 1rem 0;
             .linkMainInicio {
                 width: 90%;
-                h3 {
-                    &:hover {
-                        transform: scale(1.05);
-                    }
+                h2:hover {
+                    transform: scale(1.05);
                 }
                 img {
                     width: 100%;

@@ -1,3 +1,4 @@
+// Ver descripción de anclas en productos.html
 .ancla {
     position: relative;
     top: -70px;
@@ -34,7 +35,6 @@
         }
         p {
             text-align: center;
-            @include contents-font(0.9rem);
         }
         .nombreProducto {
             font-weight: 800;

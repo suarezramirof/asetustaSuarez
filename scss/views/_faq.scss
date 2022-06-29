@@ -11,6 +11,7 @@
         img {
             width: 100%;
         }
+        // La imagen solo aparece en la vista desktop
         @media(map-get($media,large)) {
             display: block;
         }

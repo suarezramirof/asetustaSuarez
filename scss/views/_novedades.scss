@@ -1,8 +1,18 @@
 .mainNovedades{
+    @media(map-get($media,medium)) {
+        // A partir de la vista tablet, las novedades se colocan en dos columnas
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media(map-get($media,large)) {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
     .novedad {
         display: grid;
         grid-template-areas: "titulo titulo"
                              "imagen texto";
+        grid-template-columns: 1fr 1fr;
         margin: 0 3vw 0 3vw;
         .imgNovedad {
             grid-area: imagen;
@@ -18,11 +28,16 @@
         }
         .txtNovedad {
             grid-area: texto;
-            margin: 0 1rem 1rem 1rem;
+            margin: 0 1rem 0 1rem;
+            align-self: center;
+            text-align: center;
         }
     }
     .novedadSegunda {
-        grid-template-columns: 1fr 1fr;
+        // Para la segunda novedad se invierte el orden de texto e imagen, para que queden invertidas en comparación con la primera novedad
+        grid-template-areas: "titulo titulo"
+                             "texto imagen";
+        margin-bottom: 2rem;
         .imgNovedad {
             align-self: center;
         }
@@ -30,13 +45,16 @@
     @media(map-get($media,medium)) {
         .novedad {
             margin-top: 2rem;
-            grid-template-areas: "imagen titulo"
-                                 "imagen texto";
-            grid-template-rows: auto auto;
+            // A partir de la vista de tablet, como las novedades van en columnas, el contenido va en orden descendente, por eso se cambia el display a flex
+            display: flex;
+            flex-direction: column;
+            h3 {
+                padding: 0;
+                margin: 1rem auto 1rem auto;
+            }
         }
-    }
-    @media(map-get($media,large)) {
-        display: grid;
-        grid-template-columns: auto auto;
+        .novedadSegunda {
+            margin-bottom: 3vw;
+        }
     }
 }

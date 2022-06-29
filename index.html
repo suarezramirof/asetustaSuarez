@@ -8,22 +8,24 @@
     <meta name="description" content="Muebles de alta calidad para el hogar, oficina y exterior. Envíos a todo el país.">
     <meta name="robots" content="index,follow">
     <meta name="keywords" content="muebles de madera, muebles de calidad, muebles finos, muebles de diseño, muebles de oficina, muebles de exterior, mesas de madera, escritorio de madera, sillas de madera, mesas de luz, mesa ratona">
-    <!-- CSS only -->
+    <!-- CSS de BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- mi css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Asetusta | Muebles</title>
 </head>
-
 <body>
     <header>
+        <!-- El logo se coloca dentro de un h1 para SEO -->
         <h1 class="contLogo">
             <a href="#">
-                <img class="logo" src="img/asetusta-removebg.png" alt="muebles asetusta">
+                <img class="logo" src="img/asetusta-removebg.webp" alt="muebles asetusta">
             </a>
         </h1>
     </header>
+    <!-- Navbar de BS -->
+    <!-- Se expande a partir de 1200 px (xl) -->
     <nav class="navbar navbar-expand-xl bg-transparent">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,7 +33,6 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
@@ -61,33 +62,33 @@
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <!-- Se agrega un div a la navbar de BS para el carrito de compras -->
                     <div class="carrito">
                         <a href="#">
-                            <img class="imgCarrito" src="img/shopping-cart.png" alt="carrito de compras">
+                            <img class="imgCarrito" src="img/shopping-cart.webp" alt="carrito de compras">
                         </a>
                     </div>
                 </form>
             </div>
         </div>
     </nav>
-
     <main>
+        <!-- Este div solo va a usarse en la vista desktop -->
         <div class="contIndex">
             <div class="seccionInicio">
                 <a class="linkMainInicio" href="pages/productos.html#hogar">
                     <h2 class="subtitulosMain subtitulosMainIndex">
                         Línea Hogar
                     </h2>
-                    <img class="linkFotoInicio" src="img/mueble_hogar_1.jpg" alt="imagen de ejemplo línea hogar">
+                    <img class="linkFotoInicio" src="img/mueble_hogar_1.webp" alt="imagen de ejemplo línea hogar">
                 </a>
             </div>
-
             <div class="seccionInicio">
                 <a class="linkMainInicio" href="pages/productos.html#oficina">
                     <h2 class="subtitulosMain subtitulosMainIndex">
                         Línea Oficina
                     </h2>
-                    <img class="linkFotoInicio" src="img/mueble_oficina_1.jpg" alt="imagen de ejemplo línea oficina">
+                    <img class="linkFotoInicio" src="img/mueble_oficina_1.webp" alt="imagen de ejemplo línea oficina">
                 </a>
             </div>
             <div class="seccionInicio">
@@ -95,10 +96,11 @@
                     <h2 class="subtitulosMain subtitulosMainIndex">
                         Línea Exterior
                     </h2>
-                    <img class="linkFotoInicio" src="img/mueble_exterior_1.jpg" alt="imagen de ejemplo línea exterior">
+                    <img class="linkFotoInicio" src="img/mueble_exterior_1.webp" alt="imagen de ejemplo línea exterior">
                 </a>
             </div>
         </div>
+        <!-- El carrusel solo va a usarse en las vistas mobile y tablet -->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -111,7 +113,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a class="linkMainInicio" href="pages/productos.html#hogar">
-                        <img src="img/mueble_hogar_1.jpg" class="imgCarousel d-block w-100"
+                        <img src="img/mueble_hogar_1.webp" class="imgCarousel d-block w-100"
                             alt="imagen de ejemplo línea hogar">
                         <div class="carousel-caption d-block">
                             <h5>Línea Hogar</h5>
@@ -120,7 +122,7 @@
                 </div>
                 <div class="carousel-item">
                     <a class="linkMainInicio" href="pages/productos.html#oficina">
-                        <img src="img/mueble_oficina_1.jpg" class="imgCarousel d-block w-100"
+                        <img src="img/mueble_oficina_1.webp" class="imgCarousel d-block w-100"
                             alt="imagen de ejemplo línea oficina">
                         <div class="carousel-caption d-block">
                             <h5>Línea Oficina</h5>
@@ -129,7 +131,7 @@
                 </div>
                 <div class="carousel-item">
                     <a class="linkMainInicio" href="pages/productos.html#exterior">
-                        <img src="img/mueble_exterior_1.jpg" class="imgCarousel d-block w-100"
+                        <img src="img/mueble_exterior_1.webp" class="imgCarousel d-block w-100"
                             alt="imagen de ejemplo línea exterior">
                         <div class="carousel-caption d-block">
                             <h5>Línea Exterior</h5>
@@ -159,14 +161,15 @@
                     <li>
                         <a href="pages/faq.html">Preguntas frecuentes</a>
                     </li>
+                    <!-- No se asignan vínculos a los otros elementos de la lista ya que dichas secciones aún no están construidas -->
                     <li>
-                        <a href="">Términos y condiciones</a>
+                        <p>Términos y condiciones</p>
                     </li>
                     <li>
-                        <a href="">Envíos</a>
+                        <p>Envíos</p>
                     </li>
                     <li>
-                        <a href="">Formas de pago</a>
+                        <p>Formas de pago</p>
                     </li>
                 </ul>
             </div>
@@ -179,7 +182,7 @@
                         <a href="pages/contacto.html">Contacto</a>
                     </li>
                     <li>
-                        <a href="mailto:info@asetusta.com">Consultas</a>
+                        <a href="mailto:info@asetusta.com.ar">Consultas</a>
                     </li>
                 </ul>
             </div>
@@ -187,16 +190,16 @@
                 <h4 class="titRedes">REDES SOCIALES</h4>
                 <div class="linksRedes">
                     <a href="https://www.facebook.com" target="_blank">
-                        <img class="redes facebook" src="img/facebook.png" alt="Link a nuestro facebook">
+                        <img class="redes facebook" src="img/facebook.webp" alt="Link a nuestro facebook">
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img class="redes instagram" src="img/instagram.png" alt="Link a nuestro instagram">
+                        <img class="redes instagram" src="img/instagram.webp" alt="Link a nuestro instagram">
                     </a>
                     <a href="https://www.pinterest.com" target="_blank">
-                        <img class="redes pinterest" src="img/pinterest.png" alt="Link a nuestro pinterest">
+                        <img class="redes pinterest" src="img/pinterest.webp" alt="Link a nuestro pinterest">
                     </a>
                     <a class="botonWhatsapp" href="https://web.whatsapp.com" target="_blank">
-                        <img class="redes whatsapp" src="img/whatsapp.png" alt="Hablanos por whatsApp">
+                        <img class="redes whatsapp" src="img/whatsapp.webp" alt="Hablanos por whatsApp">
                     </a>
                 </div>
             </div>
@@ -206,7 +209,7 @@
             <p>design by <a href="mailto:suarezramirof@gmail.com">RFS</a></p>
         </div>
     </footer>
-    <!-- JavaScript Bundle with Popper -->
+    <!-- Script de BS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>

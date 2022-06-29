@@ -1,4 +1,7 @@
 main {
+    p {
+        @include contents-font(0.9rem);
+    }
     margin-top: 5rem;
     margin-bottom: 1rem;
     min-height: 44vh;

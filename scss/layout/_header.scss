@@ -1,20 +1,24 @@
 header {
+    // El header contiene únicamente el logo. Está posicionado por delante de todos los demás elementos. Se establece el display en inline block para que no ocupe el ancho total de la página y no "tape" al menú.
     display: inline-block;
-    width: 70%;
+    // Ancho del 50% por lo mismo que se describe antes
+    width: 50%;
     position: absolute;
     top: 1rem;
-    left: 30%;
+    // Como el ancho es del 50%, al establecer left en 25%, se centra. (Siempre y cuando el ancho de h1 no supere al del header)
+    left: 25%;
     z-index: 2;
-    display: grid;
-    grid-template-areas: "logo logo null";
-    grid-template-columns: 1fr 1fr 1.5fr;
     @media (map-get($media,large)){
         top: 3.75rem;
+        // En vista desktop, se disminuye el ancho del header ya que el menú es más ancho y además tiene elementos en ambos extremos.
+        width: 16%;
+        left: 42%;
     }
     h1 {
+        // Ancho del h1, y por extensión del logo (porque el width de la imagen es 100%)
         width: 10rem;
+        // Márgenes laterales auto para que se centre
         margin: 2rem auto 0 auto;
-        grid-area: logo;
         img {
             width: 100%;
         }
@@ -22,7 +26,7 @@ header {
             width: 12rem;
             margin: 1rem auto 0 auto;
         }
-        // En tamaño desktop, el logo no tiene márgen
+        // En tamaño desktop, el logo no tiene márgen superior
         @media (map-get($media,large)) {
             margin-top: 0;
         }

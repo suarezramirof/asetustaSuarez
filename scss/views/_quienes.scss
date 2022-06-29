@@ -1,6 +1,6 @@
 .quienes {
     text-align: justify;
-    width: 90%;
+    width: 80%;
     margin: auto;
     .quienesTexto {
         h3 {
@@ -8,22 +8,31 @@
         }
     }
     .quienesImagen {
-        margin-top: 1rem;
+        margin: 1rem 0 2rem 0;
         img {
             width: 100%;
+            border-radius: 1rem;
         }
     }
     @media(map-get($media,medium)) {
         display: grid;
         grid-template-areas: "texto imagen";
-        gap: 1rem;
+        gap: 3rem;
         align-items: center;
         .quienesImagen {
             grid-area: imagen;
+            min-width: 200px;
             width: 35vw;
         }
         .quienesTexto {
             grid-area: texto;
+        }
+    }
+    @media(map-get($media,large)) {
+        gap: 5rem;
+        .quienesImagen {
+            width: 420px;
+            margin: none;
         }
     }
 }

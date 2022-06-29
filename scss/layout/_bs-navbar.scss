@@ -1,4 +1,5 @@
 .navbar {
+    // --bs- múltiples atributos que se modifican para pisar las propiedades por default de bs.
     @include contents-font(1rem);
     position: sticky;
     top: 0;

@@ -7,8 +7,10 @@
     <meta name="description" content="¡Mirá todos nuestros productos! Fábrica de muebles. Envíos a todo el país.">
     <meta name="robots" content="index,follow">
     <meta name="keywords" content="muebles de madera, muebles de calidad, muebles finos, muebles de diseño, muebles de oficina, muebles de exterior, mesas de madera, escritorio de madera, sillas de madera, mesas de luz, mesa ratona">
+    <!-- CSS de BS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Mi CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Productos - Asetusta | Muebles</title>
 </head>
@@ -16,7 +18,7 @@
     <header>
         <h1 class="contLogo">
             <a href="../index.html">
-                <img class="logo" src="../img/asetusta-removebg.png" alt="productos - muebles asetusta">
+                <img class="logo" src="../img/asetusta-removebg.webp" alt="productos - muebles asetusta">
             </a>
         </h1>
     </header>
@@ -27,7 +29,6 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -62,7 +63,7 @@
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                     <div class="carrito">
                         <a href="#">
-                            <img class="imgCarrito" src="../img/shopping-cart.png" alt="carrito de compras">
+                            <img class="imgCarrito" src="../img/shopping-cart.webp" alt="carrito de compras">
                         </a>
                     </div>
                 </form>
@@ -73,30 +74,30 @@
         <div class="seccionProductos">
             <div class="titProductos">
                 <h2 class="subtitulosMain">Línea Hogar</h2>
+                <!-- Se crean "anclas" en cada sección de productos para usarlas como target de los links (del index y del menu) y poder modificar la posición de las mismas. El objetivo es que al hacer click en alguno de los links, efectivamente el inicio de dicha sección este justo al inicio de la pantalla (en vista mobile y tablet) o justo por debajo de la navbar (en vista desktop) -->
                 <a class="ancla anclaPrimera" name="hogar"></a>
             </div>
             <div class="imagenesProductos">
                 <a href="">
-                    <img src="../img/mueble_hogar_1.jpg" alt="cómoda de madera enchapada, con 6 cajones">
+                    <img src="../img/mueble_hogar_1.webp" alt="cómoda de madera enchapada, con 6 cajones">
                     <p class="nombreProducto">Cómoda Estocolmo</p>
+                    <p>Precio de lista: $70.000</p>
+                </a>
+                <a href="">
+                    <img src="../img/mueble_hogar_2.webp" alt="rack de madera enchapada, con 2 cajones">
+                    <p class="nombreProducto">Rack Granada</p>
                     <p>Precio de lista: $50.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_hogar_1.jpg" alt="cómoda de madera enchapada, con 6 cajones">
-                    <p class="nombreProducto">Cómoda Estocolmo</p>
-                    <p>Precio de lista: $50.000</p>
+                    <img src="../img/mueble_hogar_3.webp" alt="mesa de luz de madera enchapada, con 1 cajon">
+                    <p class="nombreProducto">Mesa de Luz Madrid</p>
+                    <p>Precio de lista: $10.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_hogar_1.jpg" alt="cómoda de madera enchapada, con 6 cajones">
-                    <p class="nombreProducto">Cómoda Estocolmo</p>
-                    <p>Precio de lista: $50.000</p>
+                    <img src="../img/mueble_hogar_6.webp" alt="mesa de comedor de madera enchapada 150 mts">
+                    <p class="nombreProducto">Mesa Comedor Sevilla</p>
+                    <p>Precio de lista: $80.000</p>
                 </a>
-                <a href="">
-                    <img src="../img/mueble_hogar_1.jpg" alt="cómoda de madera enchapada, con 6 cajones">
-                    <p class="nombreProducto">Cómoda Estocolmo</p>
-                    <p>Precio de lista: $50.000</p>
-                </a>
-                
             </div>
         </div>
         <hr>
@@ -107,24 +108,24 @@
             </div>
             <div class="imagenesProductos">
                 <a href="">
-                    <img src="../img/mueble_oficina_2.jpg" alt="Escritorio de madera con patas de hierro">
-                    <p class="nombreProducto">Escritorio Singapur</p>
-                    <p>Precio de lista: $32.000</p>
+                    <img src="../img/mueble_oficina_3.webp" alt="Escritorio de madera con cajonera blanca">
+                    <p class="nombreProducto">Escritorio Valencia</p>
+                    <p>Precio de lista: $70.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_oficina_2.jpg" alt="Escritorio de madera con patas de hierro">
+                    <img src="../img/mueble_oficina_2.webp" alt="Escritorio de madera con patas de hierro">
                     <p class="nombreProducto">Escritorio Singapur</p>
-                    <p>Precio de lista: $32.000</p>
+                    <p>Precio de lista: $35.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_oficina_2.jpg" alt="Escritorio de madera con patas de hierro">
-                    <p class="nombreProducto">Escritorio Singapur</p>
-                    <p>Precio de lista: $32.000</p>
+                    <img src="../img/mueble_oficina_6.webp" alt="Escritorio de madera kiri">
+                    <p class="nombreProducto">Escritorio Marbella</p>
+                    <p>Precio de lista: $70.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_oficina_2.jpg" alt="Escritorio de madera con patas de hierro">
-                    <p class="nombreProducto">Escritorio Singapur</p>
-                    <p>Precio de lista: $32.000</p>
+                    <img src="../img/mueble_oficina_4.webp" alt="Escritorio de madera con patas de hierro más 2 cajones">
+                    <p class="nombreProducto">Escritorio Cádiz</p>
+                    <p>Precio de lista: $80.000</p>
                 </a>
             </div>
         </div>
@@ -136,24 +137,24 @@
             </div>
             <div class="imagenesProductos">
                 <a href="">
-                    <img src="../img/mueble_exterior_1.jpg" alt="Mesa de madera rústica con base de hierro negro">
+                    <img src="../img/mueble_exterior_1.webp" alt="Mesa de madera rústica con base de hierro negro más 6 sillones de ratán">
                     <p class="nombreProducto">Juego de jardín Lisboa</p>
                     <p>Precio de lista: $250.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_exterior_1.jpg" alt="Mesa de madera rústica con base de hierro negro">
-                    <p class="nombreProducto">Juego de jardín Lisboa</p>
-                    <p>Precio de lista: $250.000</p>
+                    <img src="../img/mueble_exterior_2.webp" alt="Mesa de madera negra con base de hierro negro más 8 sillas de ratán">
+                    <p class="nombreProducto">Juego de jardín Oporto</p>
+                    <p>Precio de lista: $550.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_exterior_1.jpg" alt="Mesa de madera rústica con base de hierro negro">
-                    <p class="nombreProducto">Juego de jardín Lisboa</p>
-                    <p>Precio de lista: $250.000</p>
+                    <img src="../img/mueble_exterior_3.webp" alt="Sillones de pino más mesa baja y butaca">
+                    <p class="nombreProducto">Juego de jardín Serpa</p>
+                    <p>Precio de lista: $180.000</p>
                 </a>
                 <a href="">
-                    <img src="../img/mueble_exterior_1.jpg" alt="Mesa de madera rústica con base de hierro negro">
-                    <p class="nombreProducto">Juego de jardín Lisboa</p>
-                    <p>Precio de lista: $250.000</p>
+                    <img src="../img/mueble_exterior_4.webp" alt="Mesa de ratán entretejida más 2 sillones">
+                    <p class="nombreProducto">Juego de jardín Tondela</p>
+                    <p>Precio de lista: $200.000</p>
                 </a>
             </div>
         </div>
@@ -169,13 +170,13 @@
                         <a href="faq.html">Preguntas frecuentes</a>
                     </li>
                     <li>
-                        <a href="">Términos y condiciones</a>
+                        <p>Términos y condiciones</p>
                     </li>
                     <li>
-                        <a href="">Envíos</a>
+                        <p>Envíos</p>
                     </li>
                     <li>
-                        <a href="">Formas de pago</a>
+                        <p>Formas de pago</p>
                     </li>
                 </ul>
             </div>
@@ -188,7 +189,7 @@
                         <a href="contacto.html">Contacto</a>
                     </li>
                     <li>
-                        <a href="mailto:info@asetusta.com">Consultas</a>
+                        <a href="mailto:info@asetusta.com.ar">Consultas</a>
                     </li>
                 </ul>
             </div>
@@ -196,16 +197,16 @@
                 <h4 class="titRedes">REDES SOCIALES</h4>
                 <div class="linksRedes">
                     <a href="https://www.facebook.com" target="_blank">
-                        <img class="redes facebook" src="../img/facebook.png" alt="Link a nuestro facebook">
+                        <img class="redes facebook" src="../img/facebook.webp" alt="Link a nuestro facebook">
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img class="redes instagram" src="../img/instagram.png" alt="Link a nuestro instagram">
+                        <img class="redes instagram" src="../img/instagram.webp" alt="Link a nuestro instagram">
                     </a>
                     <a href="https://www.pinterest.com" target="_blank">
-                        <img class="redes pinterest" src="../img/pinterest.png" alt="Link a nuestro pinterest">
+                        <img class="redes pinterest" src="../img/pinterest.webp" alt="Link a nuestro pinterest">
                     </a>
                     <a class="botonWhatsapp" href="https://web.whatsapp.com" target="_blank">
-                        <img class="redes whatsapp" src="../img/whatsapp.png" alt="Hablanos por whatsApp">
+                        <img class="redes whatsapp" src="../img/whatsapp.webp" alt="Hablanos por whatsApp">
                     </a>
                 </div>
             </div>

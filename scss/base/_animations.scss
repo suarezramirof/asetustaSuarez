@@ -1,3 +1,6 @@
+// Se establecen las keyframes para todas las animaciones.
+// Para usarlas, establecer animation-name, animation-iteration-count e animation-duration
+// Animación para que un elemento "salte" en el lugar.
 @keyframes salta {
     0%{
         transform:translate(0,0);
@@ -9,7 +12,7 @@
         transform:translate(0,0);
     }
 }
-
+// Animación para que un elemento "salte y se angoste"
 @keyframes location {
     0%{
         transform:scaleX(100%) translate(0,0);
@@ -21,7 +24,7 @@
         transform:scaleX(100%) translate(0,0);
     }
 }
-
+// Animación de rotación leve
 @keyframes telefono {
     0%{
         transform: rotate(0deg);
@@ -33,15 +36,15 @@
         transform: rotate(0deg);
     }
 }
-
+// Se disminuye la altura del elemento y se eleva. Se usa para el mail para dar la "sensación de que se envía".
 @keyframes mail {
     0%{
-        transform: scaleY(100%);
+        transform: scaleY(100%) translate(0,0);
     }
     50%{
-        transform: scaleY(50%);
+        transform: scaleY(20%) translate(0,-20px);
     }
     100%{
-        transform: scaleY(100%);
+        transform: scaleY(100%) translate(0,0);
     }
 }

@@ -24,7 +24,6 @@
                 padding: 3vh 0 0.5rem 0;
             }
             p {
-                @include contents-font(0.9rem);
                 text-align: justify;
             }
         }
@@ -43,9 +42,10 @@
         }
     }
     @media(map-get($media,medium)) {
-        grid-template-areas: "img texto"
-                             "img compra";
-        grid-template-columns: 1fr 3fr;
+        // blank y null son columnas que se usan simplemente para dar "márgen". No tienen contenido
+        grid-template-areas: "blank img texto null"
+                             "blank img compra null";
+        grid-template-columns: 1fr 1fr 2fr 1fr;
         padding-bottom: 1rem;
         .compraOferta {
             a {

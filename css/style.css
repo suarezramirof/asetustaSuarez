@@ -12,6 +12,8 @@ p {
 a {
   text-decoration: none;
   color: black; }
+  a:hover {
+    color: black; }
 
 @keyframes salta {
   0% {
@@ -39,29 +41,27 @@ a {
 
 @keyframes mail {
   0% {
-    transform: scaleY(100%); }
+    transform: scaleY(100%) translate(0, 0); }
   50% {
-    transform: scaleY(50%); }
+    transform: scaleY(20%) translate(0, -20px); }
   100% {
-    transform: scaleY(100%); } }
+    transform: scaleY(100%) translate(0, 0); } }
 
 header {
   display: inline-block;
-  width: 70%;
+  width: 50%;
   position: absolute;
   top: 1rem;
-  left: 30%;
-  z-index: 2;
-  display: grid;
-  grid-template-areas: "logo logo null";
-  grid-template-columns: 1fr 1fr 1.5fr; }
+  left: 25%;
+  z-index: 2; }
   @media (min-width: 1200px) {
     header {
-      top: 3.75rem; } }
+      top: 3.75rem;
+      width: 16%;
+      left: 42%; } }
   header h1 {
     width: 10rem;
-    margin: 2rem auto 0 auto;
-    grid-area: logo; }
+    margin: 2rem auto 0 auto; }
     header h1 img {
       width: 100%; }
     @media (min-width: 768px) {
@@ -134,6 +134,11 @@ main {
   margin-top: 5rem;
   margin-bottom: 1rem;
   min-height: 44vh; }
+  main p {
+    font-family: "Roboto", sans-serif;
+    color: black;
+    font-size: 0.9rem;
+    line-height: normal; }
   @media (min-width: 768px) {
     main {
       margin-bottom: 1.5rem; } }
@@ -239,7 +244,7 @@ footer {
         padding: 0 0 1rem 0; }
         .contIndex .seccionInicio .linkMainInicio {
           width: 90%; }
-          .contIndex .seccionInicio .linkMainInicio h3:hover {
+          .contIndex .seccionInicio .linkMainInicio h2:hover {
             transform: scale(1.05); }
           .contIndex .seccionInicio .linkMainInicio img {
             width: 100%; } }
@@ -276,11 +281,7 @@ footer {
     .imagenesProductos a img {
       width: 100%; }
     .imagenesProductos a p {
-      text-align: center;
-      font-family: "Roboto", sans-serif;
-      color: black;
-      font-size: 0.9rem;
-      line-height: normal; }
+      text-align: center; }
     .imagenesProductos a .nombreProducto {
       font-weight: 800; }
   @media (min-width: 768px) {
@@ -311,10 +312,6 @@ footer {
     .oferta .infoCompra .infoOferta h3 {
       padding: 3vh 0 0.5rem 0; }
     .oferta .infoCompra .infoOferta p {
-      font-family: "Roboto", sans-serif;
-      color: black;
-      font-size: 0.9rem;
-      line-height: normal;
       text-align: justify; }
   .oferta .compraOferta {
     grid-area: compra;
@@ -328,15 +325,26 @@ footer {
         width: 2rem; }
   @media (min-width: 768px) {
     .oferta {
-      grid-template-areas: "img texto" "img compra";
-      grid-template-columns: 1fr 3fr;
+      grid-template-areas: "blank img texto null" "blank img compra null";
+      grid-template-columns: 1fr 1fr 2fr 1fr;
       padding-bottom: 1rem; }
       .oferta .compraOferta a {
         justify-content: flex-start; } }
 
+@media (min-width: 768px) {
+  .mainNovedades {
+    display: grid;
+    grid-template-columns: 1fr 1fr; } }
+
+@media (min-width: 1200px) {
+  .mainNovedades {
+    margin-left: 3rem;
+    margin-right: 3rem; } }
+
 .mainNovedades .novedad {
   display: grid;
   grid-template-areas: "titulo titulo" "imagen texto";
+  grid-template-columns: 1fr 1fr;
   margin: 0 3vw 0 3vw; }
   .mainNovedades .novedad .imgNovedad {
     grid-area: imagen;
@@ -349,45 +357,56 @@ footer {
     text-align: center; }
   .mainNovedades .novedad .txtNovedad {
     grid-area: texto;
-    margin: 0 1rem 1rem 1rem; }
+    margin: 0 1rem 0 1rem;
+    align-self: center;
+    text-align: center; }
 
 .mainNovedades .novedadSegunda {
-  grid-template-columns: 1fr 1fr; }
+  grid-template-areas: "titulo titulo" "texto imagen";
+  margin-bottom: 2rem; }
   .mainNovedades .novedadSegunda .imgNovedad {
     align-self: center; }
 
 @media (min-width: 768px) {
   .mainNovedades .novedad {
     margin-top: 2rem;
-    grid-template-areas: "imagen titulo" "imagen texto";
-    grid-template-rows: auto auto; } }
-
-@media (min-width: 1200px) {
-  .mainNovedades {
-    display: grid;
-    grid-template-columns: auto auto; } }
+    display: flex;
+    flex-direction: column; }
+    .mainNovedades .novedad h3 {
+      padding: 0;
+      margin: 1rem auto 1rem auto; }
+  .mainNovedades .novedadSegunda {
+    margin-bottom: 3vw; } }
 
 .quienes {
   text-align: justify;
-  width: 90%;
+  width: 80%;
   margin: auto; }
   .quienes .quienesTexto h3 {
     padding-bottom: 0.5rem; }
   .quienes .quienesImagen {
-    margin-top: 1rem; }
+    margin: 1rem 0 2rem 0; }
     .quienes .quienesImagen img {
-      width: 100%; }
+      width: 100%;
+      border-radius: 1rem; }
   @media (min-width: 768px) {
     .quienes {
       display: grid;
       grid-template-areas: "texto imagen";
-      gap: 1rem;
+      gap: 3rem;
       align-items: center; }
       .quienes .quienesImagen {
         grid-area: imagen;
+        min-width: 200px;
         width: 35vw; }
       .quienes .quienesTexto {
         grid-area: texto; } }
+  @media (min-width: 1200px) {
+    .quienes {
+      gap: 5rem; }
+      .quienes .quienesImagen {
+        width: 420px;
+        margin: none; } }
 
 .quienesHoy {
   padding-bottom: 2rem; }
@@ -453,7 +472,7 @@ footer {
       .mainContacto .itemsContacto .iconoMail:hover {
         animation-name: mail;
         animation-iteration-count: infinite;
-        animation-duration: 1s; } }
+        animation-duration: 2s; } }
 
 .contFaq {
   margin: 2rem 1rem 1rem 1rem; }

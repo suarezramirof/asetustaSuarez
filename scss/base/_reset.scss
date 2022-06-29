@@ -1,3 +1,4 @@
+// Reset, se eliminan estilos que BS aplica a los p y a.
 *{
     margin: 0;
     padding: 0;
@@ -11,4 +12,7 @@ p {
 a{
     text-decoration: none;
     color: black;
+    &:hover{
+        color: black;
+    }
 }

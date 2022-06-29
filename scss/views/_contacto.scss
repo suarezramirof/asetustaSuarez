@@ -52,7 +52,6 @@
         }
         .itemsContacto { 
             width: auto;
-            
             .iconoLoc:hover {
                 animation-name: location;
                 animation-iteration-count: infinite;
@@ -66,7 +65,7 @@
             .iconoMail:hover {
                 animation-name: mail;
                 animation-iteration-count: infinite;
-                animation-duration: 1s;
+                animation-duration: 2s;
             }
         }
     }
